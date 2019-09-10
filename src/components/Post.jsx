@@ -15,12 +15,12 @@ class Post extends React.Component {
 
     handleUpvote() {
         var temp = this.state.upvotes;
-        this.setState({ upvotes: temp++ });
+        this.setState({ upvotes: temp + 1 });
     }
 
     handleDownvote() {
         var temp = this.state.downvotes;
-        this.setState({ downvotes: temp++ });
+        this.setState({ downvotes: temp + 1 });
     }
 
     render() {
