@@ -31,11 +31,9 @@ class Post extends React.Component {
                 <h4>{this.props.userName}</h4>
                 <h4>{this.props.postTitle}</h4>
                 <h4>{this.props.postBody}</h4>
-                <h4>{this.state.upvotes}</h4>
-                <h4>{this.state.downvotes}</h4>
-                <button onClick={() => { this.handleUpvote(); }}>Upvote</button>
+                <button onClick={() => { this.handleUpvote(); }}>Upvote {this.state.upvotes}</button>
                 {/* Upvote count */}
-                <button onClick={this.handleDownvote}>Downvote</button>
+                <button onClick={this.handleDownvote}>Downvote {this.state.downvotes}</button>
                 {/* Downvote count */}
 
             </div>
