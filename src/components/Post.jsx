@@ -30,9 +30,9 @@ class Post extends React.Component {
     render() {
         return (
             <div style={cardStyle}>
-                <h4>{this.props.userName}</h4>
-                <h4>{this.props.postTitle}</h4>
-                <h4>{this.props.postBody}</h4>
+                <h4>Username: {this.props.userName}</h4>
+                <h4>Title of Post: {this.props.postTitle}</h4>
+                <h4>Body of post: {this.props.postBody}</h4>
                 <button onClick={this.handleUpvote}>Upvote {this.state.upvotes}</button>
                 {/* Upvote count */}
                 <button onClick={this.handleDownvote}>Downvote {this.state.downvotes}</button>
@@ -43,12 +43,20 @@ class Post extends React.Component {
     }
 }
 var cardStyle = {
+    // zIndex: '1',
+    // backgroundColor: 'darkgray',
+    // width: '90%',
+    // height: '300px',
+    // overflow: 'auto',
+    // border: '2px solid black',
+    width: "500px",
+    margin: "30px auto",
+    backgroundColor: "gray",
+    minHeight: "200px",
+    boxSizing: "border-box",
+    border: '5px dotted black'
 
-    backgroundColor: 'darkgray',
-    width: '90%',
-    height: '300px',
-    overflow: 'auto',
-    border: '2px solid black'
+
 
 }
 
