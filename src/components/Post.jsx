@@ -23,9 +23,11 @@ class Post extends React.Component {
         this.setState({ downvotes: temp + 1 });
     }
 
+
+
     render() {
         return (
-            <div>
+            <div style={cardStyle}>
                 <h4>{this.props.userName}</h4>
                 <h4>{this.props.postTitle}</h4>
                 <h4>{this.props.postBody}</h4>
@@ -40,6 +42,16 @@ class Post extends React.Component {
         )
     }
 }
+var cardStyle = {
+
+    backgroundColor: 'darkgray',
+    width: '90%',
+    height: '300px',
+    overflow: 'auto',
+    border: '2px solid black'
+
+}
+
 
 Post.propTypes = {
     userName: PropTypes.string,

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { v4 } from 'uuid';
 
@@ -17,7 +17,7 @@ function NewPostForm(props) {
 
     return (
         <div>
-            <form onSubmit={}>
+            <form onSubmit={handleNewPostFormSubmission}>
                 <input
                     type='text'
                     id='userName'

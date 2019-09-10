@@ -1,8 +1,8 @@
 import React from 'react';
 import PostList from './PostList';
-
-
+import NewPostForm from './NewPostForm';
 import { Switch, Route } from 'react-router-dom';
+import Header from './Header';
 
 class App extends React.Component {
     constructor(props) {
@@ -29,9 +29,11 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                dffdfd
+                <Header />
                 <Switch>
-                    <Route exact path='/' render={() => <PostList postList={this.state.masterPostList} />} />
+                    <Route exact path='/' />
+                    <Route exact path='/PostList' render={() => <PostList postList={this.state.masterPostList} />} />
+                    <Route exact path='/NewPost' render={() => <NewPostForm onNewPostCreation={this.handleAddingNewPostList} />} />
                 </Switch>
             </div>
         )
