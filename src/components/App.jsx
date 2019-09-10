@@ -1,5 +1,5 @@
 import React from 'react';
-import TicketList from './TicketList';
+import PostList from './PostList';
 
 
 import { Switch, Route } from 'react-router-dom';
@@ -15,6 +15,12 @@ class App extends React.Component {
 
     }
 
+    handleUpVotingPost(id) {
+        this.setState({ upVote: +1 });
+    }
+    handleDownVotingPost(id) {
+        this.setState({ downVote: +1 });
+    }
     handleAddingNewPostList(newPost) {
         var newMasterPostList = this.state.masterPostList.slice();
         newMasterPostList.push(newPost);
@@ -23,6 +29,7 @@ class App extends React.Component {
     render() {
         return (
             <div>
+                dffdfd
                 <Switch>
                     <Route exact path='/' render={() => <PostList postList={this.state.masterPostList} />} />
                 </Switch>

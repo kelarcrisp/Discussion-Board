@@ -10,6 +10,7 @@ const PostList = (props) => {
                 userName={post.userName}
                 postTitle={post.postTitle}
                 postBody={post.postBody}
+
                 key={post.id}
             />)}
             <Post />

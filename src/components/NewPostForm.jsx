@@ -9,7 +9,7 @@ function NewPostForm(props) {
 
     function handleNewPostFormSubmission(event) {
         event.preventDefault();
-        props.onNewPostCreation({ userName: _userName.value, postTitle: _postTitle.value, postBody: _postBody.value, id: v4() });
+        props.onNewPostCreation({ userName: _userName.value, postTitle: _postTitle.value, postBody: _postBody.value, upVote: 0, downVote: 0, id: v4() });
         _userName.value = '';
         _postTitle.value = '';
         _postBody.value = '';
@@ -36,7 +36,11 @@ function NewPostForm(props) {
                 <button type='submit'>Submit</button>
             </form>
         </div>
-    )
+    );
 }
 
-export default NewPostForm
+NewPostForm.propTypes = {
+    onNewPostCreation: PropTypes.func
+};
+
+export default NewPostForm;
