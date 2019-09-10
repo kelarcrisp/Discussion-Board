@@ -3,8 +3,9 @@ import PostList from './PostList';
 import NewPostForm from './NewPostForm';
 import { Switch, Route } from 'react-router-dom';
 import Header from './Header';
-
+import Error404 from './Error404';
 class App extends React.Component {
+    ///masterPostList that conains all of the posts that are made
     constructor(props) {
         super(props);
         this.state = {
@@ -15,12 +16,7 @@ class App extends React.Component {
 
     }
 
-    handleUpVotingPost(id) {
-        this.setState({ upVote: +1 });
-    }
-    handleDownVotingPost(id) {
-        this.setState({ downVote: +1 });
-    }
+    ///making the duplicate of the post to populate into masterPostList
     handleAddingNewPostList(newPost) {
         var newMasterPostList = this.state.masterPostList.slice();
         newMasterPostList.push(newPost);
@@ -31,9 +27,11 @@ class App extends React.Component {
             <div>
                 <Header />
                 <Switch>
+                    {/* Routes that are accessible */}
                     <Route exact path='/' />
                     <Route exact path='/PostList' render={() => <PostList postList={this.state.masterPostList} />} />
                     <Route exact path='/NewPost' render={() => <NewPostForm onNewPostCreation={this.handleAddingNewPostList} />} />
+                    <Route component={Error404} />
                 </Switch>
             </div>
         )
