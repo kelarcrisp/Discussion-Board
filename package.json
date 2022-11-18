@@ -15,7 +15,7 @@
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-router-dom": "^4.0.0",
-    "styled-jsx": "^3.2.2",
+    "styled-jsx": "^5.1.0",
     "uuid": "^3.2.1"
   },
   "devDependencies": {
@@ -26,7 +26,7 @@
     "eslint": "^4.13.1",
     "eslint-loader": "^3.0.0",
     "eslint-plugin-react": "^7.5.1",
-    "html-webpack-plugin": "^2.29.0",
+    "html-webpack-plugin": "^5.5.0",
     "react-hot-loader": "^3.0.0-beta.7",
     "webpack": "^3.4.0",
     "webpack-dev-server": "^2.5.0"
